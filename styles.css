@@ -25,6 +25,26 @@ h3 {
 }
 
 .initial-user-entry{
-  display: block;
+  display: flex;
+  flex-direction: column;
+}
 
+.left-main-column{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bottom-nav{
+  border-top: 1px solid gray;
+  font-family: 'Lora', serif;
+  font-size: 16.8px;
+  color: #D7D7D7;
+  padding: 20px;
+  margin-top: 20px;
+  display: flex;
+  vertical-align: middle;
+  flex-direction: row;
+  justify-content: space-between;
 }
