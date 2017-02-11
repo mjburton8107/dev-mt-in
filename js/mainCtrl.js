@@ -2,8 +2,8 @@ angular.module('dmSocial').controller('mainCtrl', function($scope, mainService){
 
   $scope.friends = mainService.friends;
 
-  var pages = ['view', 'find', 'update']
-  $scope.view = true;
+  var pages = ['initialView', 'landingPage', 'view', 'find', 'update']
+  $scope.initialView = true;
 
   $scope.toggleView = function(page){
     console.log(page)
@@ -24,6 +24,16 @@ angular.module('dmSocial').controller('mainCtrl', function($scope, mainService){
         bio : bio
       };
       mainService.addUserInfo(newUser);
+  }
+
+  $scope.updateUserInfo = function(name, tag, pic, bio){
+    var updatedUser = {
+      name: name,
+      tagline: tag,
+      profilePic: pic,
+      bio: bio
+    };
+    mainService.updateUserInfo(updatedUser);
   }
 
 })

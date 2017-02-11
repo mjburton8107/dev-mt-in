@@ -17,6 +17,7 @@
 	</nav>
 
 
+	<div ng-show="initialView">
 		<div class=left-main-column>
 				<h3>Welcome to DevMountain Social <br />
 					Add Some Info So Friends Can Find You</h3>
@@ -26,20 +27,36 @@
 					<input type="text" ng-model="newUserTagline" placeholder="Tagline"></input>
 					<input type="text" ng-model="newUserProfileIMG" placeholder="Profile Image URL"></input>
 					<input class="bio-box" type="text" ng-model="newUserBio" placeholder="Bio"></input>
-					<button ng-click="addUserInfo(newUserName, newUserTagline, newUserProfileIMG, newUserBio)">Save Changes</button>
+					<button ng-click="addUserInfo(newUserName, newUserTagline, newUserProfileIMG, newUserBio); toggleView('landingPage')">Save Changes</button>
 				</div>
 		</div>
+	</div>
 
-	<h4>Friend Name</h4>
-	<div class=userInformation ng-repeat="friend in friends">
-		 <div class="userName"> {{ friend.name }}</div>
-		 <div class="userTagLing"> {{friend.tagline}}</div>
-		 <div class="userbio"> {{friend.bio}}</div>
+	<div ng-show="landingPage">
+		<div class=userInformationBox ng-repeat="friend in friends">
+			 <img ng-src="{{ friend.profilePic }}" />
+			 <div class="userInfoName"> {{ friend.name }}</div>
+			 <div class="userInfoTag"> {{ friend.tagline }}</div>
+			 <div class="userInfoBio"> {{ friend.bio }} </div>
+	  </div>
   </div>
 
   <div ng-show="view">View Page Test</div>
 	<div ng-show="find">Find Page Test</div>
-	<div ng-show="update">Update Page Test</div>
+
+
+
+	<div ng-show="update">
+	<div class=left-main-column>
+		<div class=update-user-entry>
+			<input type="text" ng-model="updateUserName" placeholder="Full Name"></input>
+			<input type="text" ng-model="updateUserTagline" placeholder="Tagline"></input>
+			<input type="text" ng-model="updateUserProfileIMG" placeholder="Profile Image URL"></input>
+			<input class="bio-box" type="text" ng-model="updateUserBio" placeholder="Bio"></input>
+			<button ng-click="updateUserInfo(updateUserName, updateUserTagline, updateUserProfileIMG, updateUserBio); toggleView('landingPage')">Update Profile</button>
+		</div>
+	</div>
+	</div>
 
 
 	<nav class="bottom-nav">
