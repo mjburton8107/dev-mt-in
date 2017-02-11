@@ -32,14 +32,18 @@
 		</div>
 	</div>
 
-	<div ng-show="landingPage">
+	<div class=landingContainer ng-show="landingPage">
 		<div class=userInformationBox ng-repeat="friend in friends">
-			 <img ng-src="{{ friend.profilePic }}" />
 			 <div class="userInfoName"> {{ friend.name }}</div>
 			 <div class="userInfoTag"> {{ friend.tagline }}</div>
 			 <div class="userInfoBio"> {{ friend.bio }} </div>
 	  </div>
-  </div>
+		<div class=userImageContainer ng-repeat="friend in friends">
+			<img class="user-img" ng-src="{{ friend.profilePic }}"/>
+		</div>
+
+
+	</div>
 
   <div ng-show="view">View Page Test</div>
 	<div ng-show="find">Find Page Test</div>
