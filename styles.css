@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Lora');
+
+body {
+  box-sizing: border-box;
+}
+
+h3 {
+  font-family: 'Lora', serif;
+  font-size: 28px;
+  color: #000000;
+  text-align: center;
+}
+
+.mainNav {
+  display: flex;
+}
+
+.mainHeader {
+  font-family: 'Lora', serif;
+  font-size: 28px;
+  color: #000000;
+  flex: 1;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.initial-user-entry{
+  display: block;
+
+}
