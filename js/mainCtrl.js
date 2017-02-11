@@ -1,4 +1,6 @@
-angular.module('dmSocial').controller('mainCtrl', function($scope){
+angular.module('dmSocial').controller('mainCtrl', function($scope, mainService){
+
+  $scope.friends = mainService.friends;
 
   var pages = ['view', 'find', 'update']
   $scope.view = true;
@@ -12,6 +14,16 @@ angular.module('dmSocial').controller('mainCtrl', function($scope){
         $scope[pages[i]] = false;
       }
     }
+  }
+
+  $scope.addUserInfo = function(name, tag, pic, bio){
+      var newUser = {
+        name: name,
+        tagline: tag,
+        profilePic: pic,
+        bio : bio
+      };
+      mainService.addUserInfo(newUser);
   }
 
 })

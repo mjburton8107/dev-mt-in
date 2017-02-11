@@ -26,9 +26,16 @@
 					<input type="text" ng-model="newUserTagline" placeholder="Tagline"></input>
 					<input type="text" ng-model="newUserProfileIMG" placeholder="Profile Image URL"></input>
 					<input class="bio-box" type="text" ng-model="newUserBio" placeholder="Bio"></input>
-					<button>Save Changes</button>
+					<button ng-click="addUserInfo(newUserName, newUserTagline, newUserProfileIMG, newUserBio)">Save Changes</button>
 				</div>
 		</div>
+
+	<h4>Friend Name</h4>
+	<div class=userInformation ng-repeat="friend in friends">
+		 <div class="userName"> {{ friend.name }}</div>
+		 <div class="userTagLing"> {{friend.tagline}}</div>
+		 <div class="userbio"> {{friend.bio}}</div>
+  </div>
 
   <div ng-show="view">View Page Test</div>
 	<div ng-show="find">Find Page Test</div>
