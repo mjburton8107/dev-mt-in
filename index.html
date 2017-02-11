@@ -16,24 +16,29 @@
 		<i class="fa fa-bars" aria-hidden="true"></i>
 	</nav>
 
-	<div class=left-main-column>
-			<h3>Welcome to DevMountain Social <br />
-				Add Some Info So Friends Can Find You</h3>
-			<br />
-			<div class=initial-user-entry>
-				<input type="text" ng-model="newUserName" placeholder="Full Name"></input>
-				<input type="text" ng-model="newUserTagline" placeholder="Tagline"></input>
-				<input type="text" ng-model="newUserProfileIMG" placeholder="Profile Image URL"></input>
-				<input class="bio-box" type="text" ng-model="newUserBio" placeholder="Bio"></input>
-				<button>Save Changes</button>
-			</div>
-	</div>
+
+		<div class=left-main-column>
+				<h3>Welcome to DevMountain Social <br />
+					Add Some Info So Friends Can Find You</h3>
+				<br />
+				<div class=initial-user-entry>
+					<input type="text" ng-model="newUserName" placeholder="Full Name"></input>
+					<input type="text" ng-model="newUserTagline" placeholder="Tagline"></input>
+					<input type="text" ng-model="newUserProfileIMG" placeholder="Profile Image URL"></input>
+					<input class="bio-box" type="text" ng-model="newUserBio" placeholder="Bio"></input>
+					<button>Save Changes</button>
+				</div>
+		</div>
+
+  <div ng-show="view">View Page Test</div>
+	<div ng-show="find">Find Page Test</div>
+	<div ng-show="update">Update Page Test</div>
 
 
 	<nav class="bottom-nav">
-		<div>View Friends</div>
-		<div>Find Friends</div>
-		<div>Update Profile</div>
+		<div ng-class="{'selected' : view}" ng-click="toggleView('view')">View Friends</div>
+		<div ng-class="{'selected' : find}" ng-click="toggleView('find')">Find Friends</div>
+		<div ng-class="{'selected' : update}" ng-click="toggleView('update')">Update Profile</div>
 	</nav>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>

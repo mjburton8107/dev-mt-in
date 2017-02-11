@@ -27,6 +27,7 @@ h3 {
 .initial-user-entry{
   display: flex;
   flex-direction: column;
+
 }
 
 .left-main-column{
@@ -47,4 +48,8 @@ h3 {
   vertical-align: middle;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.selected {
+  border-bottom: 2px solid #00FFE9;
 }
