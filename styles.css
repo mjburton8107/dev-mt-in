@@ -92,3 +92,29 @@ h3 {
   flex-direction: row;
   justify-content: space-between;
 }
+
+.find-page-container {
+  display: flex;
+}
+
+.right-column-find {
+  width: 10%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left-column-find {
+  width: 50%;
+}
+
+.friend-search {
+  width: 160px;
+  height: 20px;
+  float: right;
+}
+
+.removeFriendButton {
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+}

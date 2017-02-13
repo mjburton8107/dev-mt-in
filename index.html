@@ -46,7 +46,18 @@
 	</div>
 
   <div ng-show="view">View Page Test</div>
-	<div ng-show="find">Find Page Test</div>
+
+	<div class="find-page-container" ng-show="find">
+		<input class="friend-search" type='text' ng-model="friendName"></input>
+			<div class="left-column-find">
+			</div>
+			<div class="right-column-find" ng-repeat="friend in friends | filter: friendName">
+				<img ng-src="{{ friend.profilePic }}" />
+				<div> {{ friend.name }}</div>
+				<button class="removeFriendButton" ng-click=removeFriend(friend.name)>x</button>
+
+			</div>
+	</div>
 
 
 

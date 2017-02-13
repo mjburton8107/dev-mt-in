@@ -34,6 +34,10 @@ angular.module('dmSocial').controller('mainCtrl', function($scope, mainService){
       bio: bio
     };
     mainService.updateUserInfo(updatedUser);
+  };
+
+  $scope.removeFriend = function(name){
+    mainService.removeFriend(name);
   }
 
 })
