@@ -136,3 +136,15 @@ h3 {
   width: 80%;
   margin: 0 auto;
 }
+
+.find-page-container {
+  display: flex;
+}
+
+.find-right-container{
+  width: 40%
+}
+
+.find-left-container {
+  width: 60%;
+}
