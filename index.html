@@ -49,12 +49,12 @@
 
 	<div class="container">
 	  <div ng-show="view" class="view-main-container">
-			<input class="friend-search" type='text' ng-model="friendName">
-				<div class="left-column-view">words here
+				<div class="left-column-view">
 				</div>
 				<div class="right-column-view">
+				<input class="friend-search" type='text' ng-model="friendName"><br />
 				<div ng-repeat="friend in friends | filter: friendName">
-					<img ng-src="{{ friend.profilePic }}" />
+					<img ng-src="{{ friend.profilePic }}" ng-click="toggleView('friendsProfile')" />
 					<div> {{ friend.name }} </div>
 					<button class="removeFriendButton" ng-click=removeFriend(friend.name)>Remove Friend</button>
 				</div>
@@ -65,7 +65,8 @@
 	<div class="find-page-container" ng-show="find">
 		<div class="find-left-container"></div>
 		<div class="find-right-container">
-		<div ng-repeat="profile in profiles">
+			<input type="text" ng-model="profileFilter"></input>
+		<div ng-repeat="profile in profiles | filter: profileFilter">
 			{{profile.name}}
 			<img ng-src="{{profile.profile.url}}" />
 			<button ng-click="addFriend(profile.name, profile.bio, profile.tagline, profile.profileUrl)">Add Friend</button>
@@ -86,6 +87,11 @@
 			<button ng-click="updateUserInfo(updateUserName, updateUserTagline, updateUserProfileIMG, updateUserBio); toggleView('landingPage')">Update Profile</button>
 		</div>
 	</div>
+	</div>
+
+	<div ng-show="friendsProfile">
+		<h1>This where you should see your friend's profile that you just clicked on</h1>
+
 	</div>
 
 

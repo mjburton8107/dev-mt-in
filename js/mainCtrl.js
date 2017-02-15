@@ -2,7 +2,7 @@ angular.module('dmSocial').controller('mainCtrl', function($scope, mainService){
 
   $scope.friends = mainService.friends;
 
-  var pages = ['initialView', 'landingPage', 'view', 'find', 'update']
+  var pages = ['initialView', 'landingPage', 'view', 'find', 'update', 'friendsProfile']
   $scope.initialView = true;
 
   $scope.toggleView = function(page){
@@ -54,5 +54,6 @@ $scope.addFriend = function(name, bio, tagline, pic){
 };
 
 $scope.addFriend();
+
 
 })
