@@ -55,14 +55,19 @@
 				<div class="right-column-view">
 				<div ng-repeat="friend in friends | filter: friendName">
 					<img ng-src="{{ friend.profilePic }}" />
-					<div> {{ friend.name }}</div>
+					<div> {{ friend.name }} </div>
 					<button class="removeFriendButton" ng-click=removeFriend(friend.name)>Remove Friend</button>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="find-page-container" ng-show="find"></div>
+	<div class="find-page-container" ng-show="find">
+		<div ng-repeat="profile in profiles">
+			{{profile}}
+	</div>
+
+	</div>
 
 
 
