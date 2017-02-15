@@ -110,11 +110,29 @@ h3 {
 .friend-search {
   width: 160px;
   height: 20px;
-  float: right;
 }
 
 .removeFriendButton {
   color: white;
   background-color: black;
   border-radius: 10px;
+}
+
+.right-column-view{
+  display: flex;
+  flex-wrap: wrap;
+  width: 40%;
+}
+
+.left-column-view {
+  width: 60%;
+}
+
+.view-main-container {
+  display: flex;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
 }

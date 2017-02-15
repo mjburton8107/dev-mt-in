@@ -59,6 +59,6 @@ angular.module('dmSocial').service('mainService', function(){
           this.friends.splice(i, 1);
         }
       }
-    };
+    }
 
 });

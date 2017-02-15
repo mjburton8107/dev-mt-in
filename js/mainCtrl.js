@@ -6,7 +6,6 @@ angular.module('dmSocial').controller('mainCtrl', function($scope, mainService){
   $scope.initialView = true;
 
   $scope.toggleView = function(page){
-    console.log(page)
     for (var i = 0; i < pages.length; i++){
       if (pages[i] === page) {
         $scope[pages[i]] = true;
