@@ -1,0 +1,11 @@
+<div ng-show="update">
+<div class=left-main-column>
+  <div class=update-user-entry>
+    <input type="text" ng-model="updateUserName" placeholder="Full Name"></input>
+    <input type="text" ng-model="updateUserTagline" placeholder="Tagline"></input>
+    <input type="text" ng-model="updateUserProfileIMG" placeholder="Profile Image URL"></input>
+    <input class="bio-box" type="text" ng-model="updateUserBio" placeholder="Bio"></input>
+    <button ng-click="updateUserInfo(updateUserName, updateUserTagline, updateUserProfileIMG, updateUserBio); toggleView('landingPage')">Update Profile</button>
+  </div>
+</div>
+</div>

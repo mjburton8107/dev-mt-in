@@ -1,0 +1,12 @@
+<div class="find-page-container" ng-show="find">
+  <div class="find-left-container"></div>
+  <div class="find-right-container">
+    <input type="text" ng-model="profileFilter"></input>
+  <div ng-repeat="profile in profiles | filter: profileFilter">
+    {{profile.name}}
+    <img ng-src="{{profile.profile.url}}" />
+    <button ng-click="addFriend(profile.name, profile.bio, profile.tagline, profile.profileUrl)">Add Friend</button>
+  </div>
+</div>
+
+</div>
