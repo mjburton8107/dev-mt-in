@@ -69,19 +69,7 @@ this.addFriend = function(name, bio, tagline, pic){
     }
   }
 
-  this.updateUserInfo = function(userObj){
-    for (var i = 0; i < this.friends.length; i++){
-        if(this.friends[i].name !== userObj.name){
-          this.friends[i].name = userObj.name;
-        } if(this.friends[i].tagline !== userObj.tagline){
-          this.friends[i].tagline = userObj.tagline;
-        } if(this.friends[i].profilePic !== userObj.profilePic){
-          this.friends[i].profilePic = userObj.profilePic;
-        } if(this.friends[i].bio !== userObj.bio){
-          this.friends[i].bio = userObj.bio;
-        }
-      }
-    };
+  
 
     this.removeFriend = function(name){
       for (var i = 0; i < this.friends.length; i++){

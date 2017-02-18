@@ -8,28 +8,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>DevMtin</title>
 </head>
-
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
 <body ng-controller="mainCtrl">
 
 	<nav class=mainNav>
+		<i class="fa fa-search" aria-hidden="true"></i>
 		<h1 class="mainHeader">DevMountain</h1>
 		<i class="fa fa-bars" aria-hidden="true"></i>
 	</nav>
 
  <!-- this is where the ui-view for routing starts -->
 
-	<div ui-view></div>
+	<ui-view>
 
 
 	<nav class="bottom-nav">
-		<div ng-class="{'selected' : view}" ng-click="toggleView('view')">View Friends</div>
+		<a ui-sref='friendsView' ng-class="{'selected' : view}">View Friends</a>
 		<div ng-class="{'selected' : find}" ng-click="toggleView('find')">Find Friends</div>
 		<div ng-class="{'selected' : update}" ng-click="toggleView('update')">Update Profile</div>
 	</nav>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+
 	<script src="./js/app.js"></script>
+	<script src="./initialView/initialViewController.js"></script>
 	<script src="./js/mainCtrl.js"></script>
 	<script src="./js/mainService.js"></script>
 </body>

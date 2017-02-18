@@ -26,6 +26,11 @@ h3 {
   margin: 0px;
 }
 
+.main-nav-search {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
 
 .initial-user-entry{
   display: flex;
@@ -33,12 +38,26 @@ h3 {
 
 }
 
-.left-main-column{
-  width: 50%;
+.initialView {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.initial-left-main-column{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: 50px;
 }
+
+.initial-right-main-column {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  margin-right: 150px;
+}
+
 
 .bottom-nav{
   border-top: 1px solid gray;
