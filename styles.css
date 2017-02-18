@@ -14,16 +14,18 @@ h3 {
 
 .mainNav {
   display: flex;
+  vertical-align: middle;
+  font-size: 34px;
+  justify-content: space-between;
 }
 
 .mainHeader {
   font-family: 'Lora', serif;
   font-size: 28px;
   color: #000000;
-  flex: 1;
-  align-items: center;
-  vertical-align: middle;
+  margin: 0px;
 }
+
 
 .initial-user-entry{
   display: flex;
