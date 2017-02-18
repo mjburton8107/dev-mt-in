@@ -17,20 +17,7 @@
 	</nav>
 
 
-	<div ng-show="initialView">
-		<div class=left-main-column>
-				<h3>Welcome to DevMountain Social <br />
-					Add Some Info So Friends Can Find You</h3>
-				<br />
-				<div class=initial-user-entry>
-					<input type="text" ng-model="newUserName" placeholder="Full Name"></input>
-					<input type="text" ng-model="newUserTagline" placeholder="Tagline"></input>
-					<input type="text" ng-model="newUserProfileIMG" placeholder="Profile Image URL"></input>
-					<input class="bio-box" type="text" ng-model="newUserBio" placeholder="Bio"></input>
-					<button ng-click="addUserInfo(newUserName, newUserTagline, newUserProfileIMG, newUserBio); toggleView('landingPage')">Save Changes</button>
-				</div>
-		</div>
-	</div>
+	
 
 	<div class=landingContainer ng-show="landingPage">
 		<div class=userInformationBox ng-repeat="friend in friends">
@@ -47,20 +34,6 @@
 
 
 
-	<div class="container">
-	  <div ng-show="view" class="view-main-container">
-				<div class="left-column-view">
-				</div>
-				<div class="right-column-view">
-				<input class="friend-search" type='text' ng-model="friendName"><br />
-				<div ng-repeat="friend in friends | filter: friendName">
-					<img ng-src="{{ friend.profilePic }}" ng-click="toggleView('friendsProfile')" />
-					<div> {{ friend.name }} </div>
-					<button class="removeFriendButton" ng-click=removeFriend(friend.name)>Remove Friend</button>
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<div class="find-page-container" ng-show="find">
 		<div class="find-left-container"></div>
@@ -89,10 +62,7 @@
 	</div>
 	</div>
 
-	<div ng-show="friendsProfile">
-		<h1>This where you should see your friend's profile that you just clicked on</h1>
-
-	</div>
+	<div ui-view></div>
 
 
 	<nav class="bottom-nav">

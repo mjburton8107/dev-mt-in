@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <div class="container">
+  	  <div ng-show="view" class="view-main-container">
+  				<div class="left-column-view">
+  				</div>
+  				<div class="right-column-view">
+  				<input class="friend-search" type='text' ng-model="friendName"><br />
+  				<div ng-repeat="friend in friends | filter: friendName">
+  					<img ng-src="{{ friend.profilePic }}" ng-click="toggleView('friendsProfile')" />
+  					<div> {{ friend.name }} </div>
+  					<button class="removeFriendButton" ng-click=removeFriend(friend.name)>Remove Friend</button>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+
+  </body>
+</html>

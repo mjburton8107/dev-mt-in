@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <div ng-show="initialView">
+      <div class=left-main-column>
+          <h3>Welcome to DevMountain Social <br />
+            Add Some Info So Friends Can Find You</h3>
+          <br />
+          <div class=initial-user-entry>
+            <input type="text" ng-model="newUserName" placeholder="Full Name"></input>
+            <input type="text" ng-model="newUserTagline" placeholder="Tagline"></input>
+            <input type="text" ng-model="newUserProfileIMG" placeholder="Profile Image URL"></input>
+            <input class="bio-box" type="text" ng-model="newUserBio" placeholder="Bio"></input>
+            <button ng-click="addUserInfo(newUserName, newUserTagline, newUserProfileIMG, newUserBio); toggleView('landingPage')">Save Changes</button>
+          </div>
+      </div>
+    </div>
+
+  </body>
+</html>
