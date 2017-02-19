@@ -1,10 +1,11 @@
 <div class=landingContainer>
-  <div class=userInformationBox ng-repeat="friend in friends">
-     <div class="userInfoName"> {{ friend.name }}</div>
-     <div class="userInfoTag"> {{ friend.tagline }}</div>
-     <div class="userInfoBio"> {{ friend.bio }} </div>
+  <div class="left-landingContainer">
+     <div class="userInfoName"> {{ retrievedUser.name }} </div>
+     <div class="userInfoTag"> {{ retrievedUser.tagline }} </div>
+     <div class="userInfoBio"> {{ retrievedUser.bio }} </div>
   </div>
-  <div class=userImageContainer ng-repeat="friend in friends">
-    <img class="user-img" ng-src="{{ friend.profilePic }}"/>
+
+  <div class="right-landingContainer">
+    <img src="http://wphooper.com/svg/examples/triangle-click.svg"/>
   </div>
 </div>

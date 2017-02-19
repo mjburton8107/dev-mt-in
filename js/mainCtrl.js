@@ -1,6 +1,6 @@
 angular.module('dmSocial').controller('mainCtrl', function($scope, mainService){
 
-  $scope.friends = mainService.friends;
+  // $scope.friends = mainService.friends;
 
   // var pages = ['initialView', 'landingPage', 'view', 'find', 'update', 'friendsProfile']
   // $scope.initialView = true;
@@ -30,21 +30,21 @@ angular.module('dmSocial').controller('mainCtrl', function($scope, mainService){
     mainService.removeFriend(name);
   }
 
-  $scope.getProfiles = function(){
-    mainService.getProfiles().then(function(response){
-      $scope.profiles = response.data;
-    })
+  // $scope.getProfiles = function(){
+  //   mainService.getProfiles().then(function(response){
+  //     $scope.profiles = response.data;
+  //   })
+  //
+  // }
+  //
+  // $scope.getProfiles();
+  //
 
-  }
-
-  $scope.getProfiles();
-
-
-$scope.addFriend = function(name, bio, tagline, pic){
-  mainService.addFriend(name, tagline, bio, pic)
-};
-
-$scope.addFriend();
+// $scope.addFriend = function(name, bio, tagline, pic){
+//   mainService.addFriend(name, tagline, bio, pic)
+// };
+//
+// $scope.addFriend();
 
 
 })

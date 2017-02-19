@@ -20,18 +20,19 @@
 
  <!-- this is where the ui-view for routing starts -->
 
-	<ui-view>
+	<div ui-view></div>
 
 
 	<nav class="bottom-nav">
-		<a ui-sref='friendsView' ng-class="{'selected' : view}">View Friends</a>
-		<div ng-class="{'selected' : find}" ng-click="toggleView('find')">Find Friends</div>
-		<div ng-class="{'selected' : update}" ng-click="toggleView('update')">Update Profile</div>
+		<a ui-sref="friendsView" ng-class="{'selected' : view}">View Friends</a>
+		<a ui-sref="findFriends" ng-class="{'selected' : find}">Find Friends</a>
+		<a ui-sref="updateProfile" ng-class="{'selected' : update}">Update Profile</a>
 	</nav>
 
 
 	<script src="./js/app.js"></script>
 	<script src="./initialView/initialViewController.js"></script>
+	<script src="./landingPage/landingPageController.js"></script>
 	<script src="./js/mainCtrl.js"></script>
 	<script src="./js/mainService.js"></script>
 </body>

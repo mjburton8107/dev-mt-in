@@ -1,4 +1,6 @@
-angular.module('dmSocial').controller('initialViewController', function($scope, initialViewService) {
+angular.module('dmSocial').controller('initialViewController', function($scope) {
+
+$scope.user = [];
 
 $scope.addUserInfo = function(name, tag, pic, bio){
   var newUser = {
@@ -7,9 +9,12 @@ $scope.addUserInfo = function(name, tag, pic, bio){
         profilePic: pic,
         bio : bio
       };
-    return initialViewService.addUserInfo(newUser);
+    $scope.user.push(newUser);
+    localStorage.setItem('userObject', JSON.stringify($scope.user));
   };
 
 $scope.addUserInfo();
 
 })
+
+// when you need to get the user object: var retrievedObject = localStorage.getItem('testObject');
