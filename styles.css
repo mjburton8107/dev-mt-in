@@ -137,8 +137,11 @@ h3 {
 }
 
 .friend-search {
+  border: 2px solid black;
   width: 160px;
   height: 20px;
+  float: right;
+  margin-right: 215px;
 }
 
 .removeFriendButton {
@@ -151,19 +154,21 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   width: 40%;
+  vertical-align: middle;
+  align-items: center;
 }
 
 .left-column-view {
   width: 60%;
+  padding: 100px;
 }
 
 .view-main-container {
   display: flex;
 }
 
-.friends-view-container {
-  width: 80%;
-  margin: 0 auto;
+.view-nav-bar{
+  margin-bottom: 20px;
 }
 
 .find-page-container {
