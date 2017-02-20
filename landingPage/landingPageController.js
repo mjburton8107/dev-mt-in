@@ -1,7 +1,10 @@
 angular.module('dmSocial').controller('landingPageController', function($scope) {
 
-  $scope.retrievedUser = localStorage.getItem('userObject');
+  var retrievedUser = localStorage.getItem('userObject');
 
+  $scope.userName = JSON.parse(retrievedUser);
+
+  console.log('this is whats in local storage', $scope.retrievedUser);
 
 
 

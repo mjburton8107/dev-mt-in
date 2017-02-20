@@ -1,11 +1,11 @@
 <div class=landingContainer>
   <div class="left-landingContainer">
-     <div class="userInfoName"> {{ retrievedUser.name }} </div>
-     <div class="userInfoTag"> {{ retrievedUser.tagline }} </div>
-     <div class="userInfoBio"> {{ retrievedUser.bio }} </div>
+     <div class="userInfoName"> {{ userName.name }} </div>
+     <div class="userInfoTag"> {{ userName.tagline }} </div>
+     <div class="userInfoBio"> {{ userName.bio }} </div>
   </div>
 
   <div class="right-landingContainer">
-    <img src="http://wphooper.com/svg/examples/triangle-click.svg"/>
+    <img ng-src="{{userName.profilePic}}"/>
   </div>
 </div>

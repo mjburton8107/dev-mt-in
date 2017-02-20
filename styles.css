@@ -106,7 +106,6 @@ h3 {
 
 }
 
-
 .landingContainer {
   display: flex;
   flex-direction: row;
@@ -115,10 +114,12 @@ h3 {
 
 .left-landingContainer {
   width: 50%;
+  padding-top: 100px;
 }
 
 .right-landingContainer {
   width: 50%;
+  padding-left: 170px;
 }
 
 .find-page-container {
@@ -160,7 +161,7 @@ h3 {
   display: flex;
 }
 
-.container {
+.friends-view-container {
   width: 80%;
   margin: 0 auto;
 }

@@ -1,8 +1,6 @@
 angular.module('dmSocial').controller('friendsViewController', function($scope){
 
 
-
-
 $scope.friends = [
   { name: 'Heidi Hawkins',
     tagline: 'no pain, no gain',

@@ -1,6 +1,6 @@
 angular.module('dmSocial').controller('initialViewController', function($scope) {
 
-$scope.user = [];
+// $scope.user = [];
 
 $scope.addUserInfo = function(name, tag, pic, bio){
   var newUser = {
@@ -9,8 +9,7 @@ $scope.addUserInfo = function(name, tag, pic, bio){
         profilePic: pic,
         bio : bio
       };
-    $scope.user.push(newUser);
-    localStorage.setItem('userObject', JSON.stringify($scope.user));
+    localStorage.setItem('userObject', JSON.stringify(newUser));
   };
 
 $scope.addUserInfo();
