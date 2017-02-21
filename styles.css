@@ -106,20 +106,22 @@ h3 {
 
 }
 
-.landingContainer {
+.landingContainer-friendProfile {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.left-landingContainer {
+.left-landingContainer-friendProfile {
   width: 50%;
-  padding-top: 100px;
+  padding: 50px;
 }
 
-.right-landingContainer {
-  width: 50%;
-  padding-left: 170px;
+.right-landingContainer-friendProfile {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  padding-right: 200px;
 }
 
 .find-page-container {

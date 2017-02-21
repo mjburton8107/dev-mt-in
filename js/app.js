@@ -16,6 +16,11 @@ angular.module('dmSocial', ['ui.router'])
       templateUrl: 'friendsView/friendsView.html',
       controller: 'friendsViewController'
     })
+    .state('friendProfile', {
+      url: '/friendprofile/:profileId',
+      templateUrl: 'friendProfile/friendProfile.html',
+      controller: 'friendProfileController'
+    })
 
     $urlRouterProvider
       .otherwise('/initialView')
