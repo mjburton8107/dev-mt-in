@@ -10,8 +10,7 @@
   				</div>
 
   				<div class="right-column-view">
-            <!-- try to add filter by friendName; wouldn't work with track by -->
-          <div ng-repeat="friend in friends track by friend.id">
+          <div ng-repeat="friend in friends | filter: friendName track by friend.id">
   					<a ng-click="friendClicked(friend.id)"><img ng-src="{{ friend.profilePic }}"/></a>
   					<div> {{ friend.name }} </div>
   					<button class="removeFriendButton" ng-click=removeFriend(friend.name)>Remove Friend</button>
