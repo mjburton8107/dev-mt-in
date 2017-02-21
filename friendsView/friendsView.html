@@ -13,6 +13,7 @@
           <div ng-repeat="friend in friends | filter: friendName track by friend.id">
   					<a ng-click="friendClicked(friend.id)"><img ng-src="{{ friend.profilePic }}"/></a>
   					<div> {{ friend.name }} </div>
+            <!-- this isn't fully functional because it throws off the friend profile view by one number -->
   					<button class="removeFriendButton" ng-click=removeFriend(friend.name)>Remove Friend</button>
   				</div>
   			</div>
