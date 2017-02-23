@@ -223,3 +223,27 @@ h3 {
 .left-main-column-update {
   width: 60%;
 }
+
+.find-right-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  vertical-align: middle;
+}
+
+.view-nav-bar-find {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 150px;
+}
+
+.btn-primary-find {
+  border: 2px solid black;
+}
+
+.friend-search-find {
+  border: 2px solid black;
+  width: 160px;
+  height: 20px;
+}

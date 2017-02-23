@@ -1,11 +1,23 @@
-<div class="find-page-container" ng-show="find">
-  <div class="find-left-container"></div>
+<div class=view-nav-bar-find>
+  <!-- <input class="friend-search" type='text' placeholder="Search for Friends" ng-model="profileFilter"><br /> -->
+  <button class="btn-primary-find" ng-click="findFriends(profileName)"> Submit </button>
+  <input class="friend-search-find" type="text" ng-model="profileName" placeholder="Search for Friends" >
+
+</div>
+
+<div class="find-page-container">
+  <div class="find-left-container">
+    <div class="left-column-view">
+      <div class="userInfoName"> {{ userName.name }} </div>
+      <div class="userInfoTag"> {{ userName.tagline }} </div>
+      <div class="userInfoBio"> {{ userName.bio }} </div>
+    </div>
+  </div>
   <div class="find-right-container">
-    <input type="text" ng-model="profileFilter"></input>
-  <div ng-repeat="profile in profiles | filter: profileFilter">
-    {{profile.name}}
+  <div ng-repeat="profile in profiles">
+    {{profile.name }}
     <img ng-src="{{profile.profile.url}}" />
-    <button ng-click="addFriend(profile.name, profile.bio, profile.tagline, profile.profileUrl)">Add Friend</button>
+    <!-- <button ng-click="addFriend(profile.name, profile.bio, profile.tagline, profile.profileUrl)">Add Friend</button> -->
   </div>
 </div>
 
