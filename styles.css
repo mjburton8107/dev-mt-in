@@ -209,3 +209,17 @@ h3 {
 .find-left-container {
   width: 60%;
 }
+
+.update-main-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.right-main-column-update {
+  width: 40%;
+  padding: 250px;
+}
+
+.left-main-column-update {
+  width: 60%;
+}
