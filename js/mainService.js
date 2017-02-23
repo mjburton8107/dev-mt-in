@@ -71,12 +71,4 @@ this.addFriend = function(name, bio, tagline, pic){
   })
 }
 
-
-
-  this.addUserInfo = function(userObj){
-    if(userObj.name && userObj.tagline && userObj.profilePic && userObj.bio){
-      this.friends.push(userObj);
-    }
-  }
-
 });

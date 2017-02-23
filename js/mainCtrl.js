@@ -16,16 +16,6 @@ angular.module('dmSocial').controller('mainCtrl', function($scope, mainService){
   // }
 
 
-  $scope.updateUserInfo = function(name, tag, pic, bio){
-    var updatedUser = {
-      name: name,
-      tagline: tag,
-      profilePic: pic,
-      bio: bio
-    };
-    mainService.updateUserInfo(updatedUser);
-  };
-
   // $scope.removeFriend = function(name){
   //   mainService.removeFriend(name);
   // }
