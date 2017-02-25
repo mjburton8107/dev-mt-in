@@ -11,7 +11,7 @@
 
   				<div class="right-column-view">
           <div ng-repeat="friend in friends | filter: friendName track by friend.id">
-  					<a ui-sref="friendProfile({profileId:{{friend.id}}})"><img ng-src="{{ friend.profilePic }}"/></a>
+  					<a ui-sref="friendProfile({profileId:{{friend.id}}})"><img ng-style="profileColor" ng-mouseover="onHoverChange()" ng-mouseleave="offHoverChange()" ng-src="{{ friend.profilePic }}"/></a>
   					<div> {{ friend.name }} </div>
             <!-- this isn't fully functional because it throws off the friend profile view by one number -->
   					<button class="removeFriendButton" ng-click=removeFriend(friend.name)>Remove Friend</button>
