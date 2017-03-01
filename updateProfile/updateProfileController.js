@@ -11,10 +11,13 @@ angular.module('dmSocial').controller('updateProfileController', function($scope
           profilePic: pic,
           bio : bio
         };
-      localStorage.setItem('userObject', JSON.stringify(newUser));
+      if(!newUser){
+        var retrievedUser = localStorage.getItem('userObject');
+        $scope.userName = JSON.parse(retrievedUser);
+      } else
+        localStorage.setItem('userObject', JSON.stringify(newUser));
     };
 
-  $scope.updateUserInfo();
 
 
 });
