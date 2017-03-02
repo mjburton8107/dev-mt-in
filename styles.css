@@ -12,6 +12,33 @@ h3 {
   text-align: center;
 }
 
+.friends-pic:hover {
+  opacity: 0.25;
+}
+
+.find-friends-pic:hover {
+  opacity: 0.25;
+}
+
+/*#friend-hover-text {
+  display: none;
+}*/
+
+#friend-image-wrapper{
+  display: flex;
+  padding: 10px;
+}
+
+#friend-image-wrapper .friend-profile-text {
+position:absolute;
+visibility:hidden;
+}
+
+#friend-image-wrapper:hover .friend-profile-text {
+visibility:visible;
+}
+
+
 .mainNav {
   display: flex;
   vertical-align: middle;

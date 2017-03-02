@@ -15,14 +15,16 @@ $scope.friendClicked = function(id){
   $state.go('friendProfile', {profileId: id})
 }
 
-$scope.onHoverChange = function(){
-    $scope.profileColor = {opacity: 0.25};
-    $scope.hoverText = "View Profile"
-  };
+// Below was an attemp to use angular for opacity change; ended up using simple CSS
 
-$scope.offHoverChange = function(){
-    $scope.profileColor = {opacity: 1};
-    $scope.hoverText = ""
-  };
+// $scope.onHoverChange = function(){
+//     $scope.profileColor = {opacity: 0.25};
+//     $scope.hoverText = "View Profile"
+//   };
+//
+// $scope.offHoverChange = function(){
+//     $scope.profileColor = {opacity: 1};
+//     $scope.hoverText = ""
+//   };
 
 })
