@@ -274,3 +274,10 @@ visibility:visible;
   width: 160px;
   height: 20px;
 }
+
+#landingContainer-findfriendProfile {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  padding-left: 600px;
+}

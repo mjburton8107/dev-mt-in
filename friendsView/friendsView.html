@@ -12,7 +12,7 @@
   				<div class="right-column-view">
           <div ng-repeat="friend in friends | filter: friendName track by friend.id">
   					<div id="friend-image-wrapper">
-              <a ui-sref="friendProfile({profileId:{{friend.id}}})"><img class="friends-pic" ng-src="{{ friend.profilePic }}"/></a>
+              <a ui-sref="friendProfile({profileId: friend.id })"><img class="friends-pic" ng-src="{{friend.profilePic}}"/></a>
               <span class="friend-profile-text">View Profile</span>
             </div>
   					<div> {{ friend.name }} </div>

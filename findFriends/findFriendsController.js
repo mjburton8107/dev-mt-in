@@ -8,8 +8,10 @@ angular.module('dmSocial').controller('findFriendsController', function($scope, 
     url: 'http://connections.devmounta.in/api/profiles',
   }).then(function(response) {
 
-      console.log('this is response', response);
+      // console.log('this is response', response);
       $scope.profiles = response.data;
+      console.log('this is $scope.profiles', $scope.profiles)
+
     });
 
     $scope.findFriends = function(profileName){

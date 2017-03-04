@@ -31,6 +31,11 @@ angular.module('dmSocial', ['ui.router'])
       templateUrl: 'findFriends/findFriends.html',
       controller: 'findFriendsController'
     })
+    .state('findFriendsProfile', {
+      url: '/findfriendsprofile/:profileId',
+      templateUrl: 'findFriends/findFriendsProfile.html',
+      controller: 'findFriendsProfileController'
+    })
 
     $urlRouterProvider
       .otherwise('/initialView')
