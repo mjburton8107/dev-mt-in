@@ -1,0 +1,28 @@
+
+      <div class=view-nav-bar>
+        <input class="friend-search" type='text' placeholder="Friends" ng-model="friendName"><br />
+      </div>
+      <div class="view-main-container">
+  				<div class="left-column-view">
+            <div class="userInfoName"> {{ userName.name }} </div>
+            <div class="userInfoTag"> {{ userName.tagline }} </div>
+            <div class="userInfoBio"> {{ userName.bio }} </div>
+  				</div>
+
+  				<div class="right-column-view">
+          <div ng-repeat="friend in friends | filter: friendName track by friend.id">
+  					<div id="friend-image-wrapper">
+              <a ui-sref="friendProfile({profileId: friend.id })"><img class="friends-pic" ng-src="{{friend.profilePic}}"/></a>
+              <span class="friend-profile-text">View Profile</span>
+            </div>
+  					<div> {{ friend.name }} </div>
+            <!-- this isn't fully functional because it throws off the friend profile view by one number -->
+  					<button class="removeFriendButton" ng-click=removeFriend(friend.name)>Remove Friend</button>
+  				</div>
+  			</div>
+  		</div>
+
+<!-- ng-style="profileColor" ng-mouseover="onHoverChange()" ng-mouseleave="offHoverChange()"  -->
+
+<!-- Here is the code I was using on img to try and create hover tooltips
+data-toggle="tooltip" data-placement="left" title="Tooltip on left" -->

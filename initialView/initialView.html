@@ -1,0 +1,18 @@
+    <div class="initialView">
+      <div class="initial-left-main-column">
+          <h3>Welcome to DevMountain Social <br />
+            Add Some Info So Friends Can Find You</h3>
+          <br />
+          <div class=initial-user-entry>
+            <input type="text" ng-model="newUserName" placeholder="Full Name"></input>
+            <input type="text" ng-model="newUserTagline" placeholder="Tagline"></input>
+            <input type="text" ng-model="newUserProfileIMG" placeholder="Profile Image URL"></input>
+            <input class="bio-box" type="text" ng-model="newUserBio" placeholder="Bio"></input>
+            <!-- <button ui-sref="landingPage" ng-click="addUserInfo(newUserName, newUserTagline, newUserProfileIMG, newUserBio)">Save Changes</button> -->
+            <a class="userProfileSubmit" ui-sref="landingPage" ng-click="addUserInfo(newUserName, newUserTagline, newUserProfileIMG, newUserBio)">Save Changes</a>
+          </div>
+      </div>
+      <div class="initial-right-main-column">
+        <img src="http://wphooper.com/svg/examples/triangle-click.svg" alt="">
+      </div>
+    </div>

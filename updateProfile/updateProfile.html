@@ -1,0 +1,19 @@
+<div class="update-main-container">
+<div class="left-main-column-update">
+  <div class="left-column-view">
+    <div class="userInfoName"> {{ userName.name }} </div>
+    <div class="userInfoTag"> {{ userName.tagline }} </div>
+    <div class="userInfoBio"> {{ userName.bio }} </div>
+    <div class="userInfoPic"> {{ userName.pic }} </div>
+  </div>
+</div>
+
+<div class="right-main-column-update">
+  <div class=update-user-entry>
+    <input type="text" ng-model="updateUserName" placeholder="Full Name"></input>
+    <input type="text" ng-model="updateUserTagline" placeholder="Tagline"></input>
+    <input type="text" ng-model="updateUserProfileIMG" placeholder="Profile Image URL"></input>
+    <input class="bio-box" type="text" ng-model="updateUserBio" placeholder="Bio"></input>
+    <button ui-sref="landingPage" ng-click="updateUserInfo(updateUserName, updateUserTagline, updateUserProfileIMG, updateUserBio)">Update Profile</button>
+  </div>
+</div>

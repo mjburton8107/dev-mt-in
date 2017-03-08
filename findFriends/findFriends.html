@@ -1,0 +1,24 @@
+<div class=view-nav-bar-find>
+  <!-- <input class="friend-search" type='text' placeholder="Search for Friends" ng-model="profileFilter"><br /> -->
+  <button class="btn-primary-find" ng-click="findFriends(profileName)"> Submit </button>
+  <input class="friend-search-find" type="text" ng-model="profileName" placeholder="Search for Friends" >
+
+</div>
+
+<div class="find-page-container">
+  <div class="find-left-container">
+    <div class="left-column-view">
+      <div class="userInfoName"> {{ userName.name }} </div>
+      <div class="userInfoTag"> {{ userName.tagline }} </div>
+      <div class="userInfoBio"> {{ userName.bio }} </div>
+    </div>
+  </div>
+  <div class="find-right-container">
+  <div class="find-friends-pic" ng-repeat="profile in profiles">
+    <a ui-sref="findFriendsProfile({profileId: profile._id })">{{profile.name }}</a>
+    <img ng-src="{{ profile.profileUrl }}" />
+    <!-- <button ng-click="addFriend(profile.name, profile.bio, profile.tagline, profile.profileUrl)">Add Friend</button> -->
+  </div>
+</div>
+
+</div>

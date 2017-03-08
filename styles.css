@@ -12,18 +12,52 @@ h3 {
   text-align: center;
 }
 
+.friends-pic:hover {
+  opacity: 0.25;
+}
+
+.find-friends-pic:hover {
+  opacity: 0.25;
+}
+
+/*#friend-hover-text {
+  display: none;
+}*/
+
+#friend-image-wrapper{
+  display: flex;
+  padding: 10px;
+}
+
+#friend-image-wrapper .friend-profile-text {
+position:absolute;
+visibility:hidden;
+}
+
+#friend-image-wrapper:hover .friend-profile-text {
+visibility:visible;
+}
+
+
 .mainNav {
   display: flex;
+  vertical-align: middle;
+  font-size: 34px;
+  justify-content: space-between;
 }
 
 .mainHeader {
   font-family: 'Lora', serif;
   font-size: 28px;
   color: #000000;
-  flex: 1;
-  align-items: center;
-  vertical-align: middle;
+  margin: 0px;
 }
+
+.main-nav-search {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
 
 .initial-user-entry{
   display: flex;
@@ -31,12 +65,26 @@ h3 {
 
 }
 
-.left-main-column{
-  width: 50%;
+.initialView {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.initial-left-main-column{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: 50px;
 }
+
+.initial-right-main-column {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  margin-right: 150px;
+}
+
 
 .bottom-nav{
   border-top: 1px solid gray;
@@ -79,18 +127,53 @@ h3 {
   color: #000000;
 }
 
+.userProfileSubmit {
+  border: 1px solid black;
+  background-color: #00FFE9;
+  border-radius: 10px;
+  text-align: center;
+}
+
 .update-user-entry{
   display: flex;
   flex-direction: column;
 
 }
 
-
-.landingContainer {
-  width: 100%;
+.landingContainer-friendProfile {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.left-landingContainer-friendProfile {
+  width: 50%;
+  padding: 50px;
+}
+
+.right-landingContainer-friendProfile {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  padding-right: 200px;
+}
+
+.landingPageContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.left-landingPageContainer {
+  width: 50%;
+  padding: 50px;
+}
+
+.right-landingPageContainer{
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  padding-right: 200px;
 }
 
 .find-page-container {
@@ -108,8 +191,11 @@ h3 {
 }
 
 .friend-search {
+  border: 2px solid black;
   width: 160px;
   height: 20px;
+  float: right;
+  margin-right: 215px;
 }
 
 .removeFriendButton {
@@ -122,17 +208,76 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   width: 40%;
+  vertical-align: middle;
+  align-items: center;
 }
 
 .left-column-view {
   width: 60%;
+  padding: 100px;
 }
 
 .view-main-container {
   display: flex;
 }
 
-.container {
-  width: 80%;
-  margin: 0 auto;
+.view-nav-bar{
+  margin-bottom: 20px;
+}
+
+.find-page-container {
+  display: flex;
+}
+
+.find-right-container{
+  width: 40%
+}
+
+.find-left-container {
+  width: 60%;
+}
+
+.update-main-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.right-main-column-update {
+  width: 40%;
+  padding: 250px;
+}
+
+.left-main-column-update {
+  width: 60%;
+}
+
+.find-right-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  vertical-align: middle;
+}
+
+.view-nav-bar-find {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 150px;
+}
+
+.btn-primary-find {
+  border: 2px solid black;
+}
+
+.friend-search-find {
+  border: 2px solid black;
+  width: 160px;
+  height: 20px;
+}
+
+#landingContainer-findfriendProfile {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  padding-left: 600px;
 }
