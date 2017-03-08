@@ -1,4 +1,4 @@
-angular.module('dmSocial').controller('findFriendsProfileController', function($scope, $http, $stateParams){
+angular.module('dmSocial').controller('findFriendsProfileController', function($scope, $http, $stateParams, mainService){
 
  var id = $stateParams.profileId
 
@@ -12,6 +12,18 @@ angular.module('dmSocial').controller('findFriendsProfileController', function($
 
 
       $scope.person = response.data;
+
+  $scope.addFriend = function(name, id, bio, tag, pic){
+    var newFriend = {
+      name : name,
+      id: id,
+      bio: bio,
+      tagline: tag,
+      pic: pic
+    }
+    console.log('this is newfriend object', newFriend);
+    mainService.addFriend(newFriend);
+  }
 
 
       // $scope.profiles = response['data'];

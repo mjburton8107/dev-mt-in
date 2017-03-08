@@ -62,13 +62,8 @@ this.friends = [
 //   })
 // }
 
-this.addFriend = function(name, bio, tagline, pic){
-  this.friends.push({
-    name: name,
-    bio: bio,
-    tagline: tagline,
-    pic: pic
-  })
+this.addFriend = function(friendObj){
+  this.friends.push(friendObj)
 }
 
 });

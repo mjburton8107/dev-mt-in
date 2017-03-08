@@ -5,5 +5,6 @@
      <div class="userInfoBio"> {{ person.bio }} </div>
      <img ng-src="{{person.profileUrl}}">
 </div>
+  <a ui-sref="friendsView"><button ng-click="addFriend(person.name, person._id, person.bio, person.tagline, person.profileUrl)">Add Friend</button></a>
 
 </div>
